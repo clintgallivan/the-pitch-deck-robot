@@ -33,10 +33,10 @@ bot.on("message", (msg) => {
   const userName = msg.from.first_name;
   // const userId = msg.from.id;
   if (msg.text === "@PitchDeckRobot enable voice chat") {
-    if (UTCTime === 0 || UTCTime === 6 || UTCTime === 12 || UTCTime === 18) {
+    if (UTCTime === 0 || UTCTime === 8 || UTCTime === 16) {
       bot.sendMessage(
         chatId,
-        `${userName}, you can now admin a voice call during the 0, 6, 12 and 18 UTC hour blocks! Please limit the call to 1 hour max!`
+        `${userName}, you can now admin a voice call during the 0, 8, and 16 UTC hour blocks! Please limit the call to 1 hour max!`
       );
       bot.promoteChatMember(chatId, userId, {
         is_anonymous: false,
@@ -50,7 +50,7 @@ bot.on("message", (msg) => {
     } else {
       bot.sendMessage(
         chatId,
-        `Voice chat can only be enabled during hours 0, 6, 12, and 18 UTC. it is currently ${UTCTime} UTC.`
+        `Voice chat can only be enabled during hours 0, 8 and 16 UTC. it is currently ${UTCTime} UTC.`
       );
     }
   }
@@ -63,7 +63,7 @@ bot.on("message", (msg) => {
   console.log("hi");
 
   // console.log(UTCTime);
-  if (!(UTCTime == 0 || UTCTime == 6 || UTCTime == 12 || UTCTime == 18) {
+  if (!(UTCTime == 0 || UTCTime == 8 || UTCTime == 16) {
     console.log(UTCTime);
     bot.getChatAdministrators(chatId).then((response) => {
       // console.log(response.length);
