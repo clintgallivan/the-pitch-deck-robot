@@ -63,7 +63,7 @@ bot.on("message", (msg) => {
   console.log("hi");
 
   // console.log(UTCTime);
-  if (!(UTCTime == 0 || UTCTime == 8 || UTCTime == 16) {
+  if (!(UTCTime == 0 || UTCTime == 8 || UTCTime == 16)) {
     console.log(UTCTime);
     bot.getChatAdministrators(chatId).then((response) => {
       // console.log(response.length);
